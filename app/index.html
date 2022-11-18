@@ -1,0 +1,42 @@
+<html data-theme="light">
+<head>
+    <title>🚀🚀 Liquitys - Securities Liquidity protocol</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container">
+    <img src="img/logo.png"/><br/>
+    <h1>Securities Liquidity protocol</h1>
+    <h2>0% interest loans on your stocks and ETFs</h2>
+    <div id="main"></div>
+    <div>
+        <h2>How does it work?</h2>
+        <p>
+            You need to buy your stocks and ETFs on app.liminal.market.<br/>
+            After you have bought some share, you can come here and stake them and mint our stable coin USDS.
+        </p>
+        <h2>Is there a demo account</h2>
+        <p>
+            Yes, import this secret key into your wallet and you can stake, mint and burn
+        </p>
+        <h2>How do you liquidate?</h2>
+        <p>Liquitys monitors the prices on your stocks and ETFs. If you go below the margin call percentage
+            of 110%, Liquitys will liqudate your stocks and ETFs. This is the order of execution
+        <ol style="text-align: left">
+            <li>Liquitys monitors the price</li>
+            <li>Liquitys notices that you have a margin call</li>
+            <li>Liquitys calls Liminal.market smart contract to liquidate your equity</li>
+            <li>Liminal.market sell your stocks and ETFs as quickly as possible (within seconds)</li>
+            <li>Liminal.market funds Liquitys broker account with fiat USD dollars.</li>
+            <li>Liquitys can transfer the money to exchange where it's traded for USDS</li>
+            <li>USDS is burned</li>
+        </ol>
+
+        </p>
+    </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="js/bundle.js" type="module"></script>
+</body>
+</html>

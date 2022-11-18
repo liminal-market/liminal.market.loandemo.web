@@ -1,0 +1,38 @@
+<div class="grid positionsGrid">
+    <table class="positions">
+        <thead>
+        <tr>
+            <th colspan="2">Symbol</th>
+            <th>TSL</th>
+            <th>Staked</th>
+            <th colspan="2">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for position in positions %}
+        <tr>
+            <td><img src="{{position.symbol.logo}}"/></td>
+            <td>{{position.symbol.id}}</td>
+            <td>{{position.tsl}}</td>
+            <td id="staked_{{position.symbol.id}}">0</td>
+            <td><input value="10" name="qty_{{position.symbol.id}}" id="qty_{{position.symbol.id}}" size="4"/></td>
+            <td>
+                <button class="stake pad0" data-symbol="{{position.symbol.id}}">Stake</button>
+                <button class="unstake pad0 secondary" data-symbol="{{position.symbol.id}}">Unstake</button>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="total_staked">
+        <h3>Mint up to $<span id="mintUpTo"></span></h3>
+        <h4>Current loan $<span id="current_loan"></span></h4>
+        <strong>Amount to mint</strong><br />
+        <input name="mint_amount" id="mint_amount">
+        <button id="mint">Mint USDS</button>
+
+        <strong>Amount to burn</strong><br />
+        <input name="burn_amount" id="burn_amount">
+        <button id="burn" class="secondary">Burn USDS</button>
+    </div>
+</div>

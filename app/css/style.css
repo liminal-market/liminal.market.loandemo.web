@@ -1,0 +1,33 @@
+
+:root {
+    --spacing:0.5rem;
+}
+h1, h2, h3 {
+    --typography-spacing-vertical:1rem;
+}
+body {
+    max-width: 1000px;
+    margin:0 auto;
+}
+body > header {
+    border-bottom: 1px solid gray;
+    padding:2rem;
+}
+.container > img {
+    width:350px
+}
+.container {
+    text-align: center;
+}
+.positionsGrid {
+    grid-template-columns: 3fr 1fr;
+}
+.positions {
+    border-right: 1px solid gray;
+}
+.positions img {
+    width: 50px;
+}
+.pad0 {
+    padding:0;
+}
